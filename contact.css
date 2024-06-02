@@ -4,12 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
+/* General Styles */
 body {
     overflow-x: hidden;
-    font-family: 'Noto Sans JP', sans-serif;
     background-color: #f0f0f0;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 .logo img {
@@ -18,6 +20,7 @@ body {
     margin-left: -50px;
 }
 
+/* Navigation Styles */
 nav {
     background-color: #fff;
     height: 80px;
@@ -51,7 +54,7 @@ nav ul li a:hover {
     border-radius: 50px;
 }
 
-/* Header */
+/* Header Styles */
 #text h1 {
     font-size: 60px;
     text-align: center;
@@ -59,55 +62,82 @@ nav ul li a:hover {
     margin-top: 20px;
 }
 
+/* Container Styles */
 .container {
     width: 100%;
-    background-color: #4b4a4b;
+    height: 600px;
     display: flex;
+    background-color: rgba(217, 212, 212, 0.523);
     padding: 20px;
 }
 
-.first {
+.box1 {
     width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 100px 20px;
+    padding: 9px 5px;
+    font-family: 'Teko', sans-serif;
+    font-size: 25px;
 }
 
-.first iframe {
-    width: 500px;
+.box2 {
+    width: 50%;
     height: 500px;
+}
+
+.car1 video {
+    width: 100%;
+    height: 500px;
+    margin-top: 20px;
     border-radius: 50px;
 }
 
-.vl {
-    border-left: 3px solid #fff;
+.second-container {
+    width: 100%;
+    display: flex;
+    background-color: rgba(217, 212, 212, 0.523);
+    padding: 20px;
+}
+
+.first video {
+    width: 500px;
     height: 500px;
-    margin-left: -3px;
-    margin-top: 30px;
+    margin-top: 20px;
+    border-radius: 90px;
+    display: flex;
+    justify-content: center;
 }
 
 .second {
     width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    color: #fff;
-}
-
-.location, .reciver, .mail {
-    display: flex;
-    align-items: center;
+    margin: 40px 20px;
+    padding: 9px 5px;
+    font-family: 'Teko', sans-serif;
     font-size: 25px;
-    margin-bottom: 20px;
 }
 
-.location i, .reciver i, .mail i {
-    margin-right: 10px;
+/* Footer Styles */
+.footer {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(93, 103, 103);
+    display: inline-flex;
+    align-items: center;
 }
 
-.second address, .second p {
-    font-size: 18px;
+.Email {
+    font-size: 20px;
+    font-family: 'Righteous', cursive;
+    color: aliceblue;
+    margin-left: 300px;
+    padding-top: 50px;
+}
+
+.Mobile {
+    font-family: 'Righteous', cursive;
+    color: aliceblue;
+    font-size: 20px;
+    padding-top: 50px;
+    margin-left: 150px;
 }
 
 /* Media Queries */
@@ -121,12 +151,8 @@ nav ul li a:hover {
         font-size: 50px;
     }
 
-    .first iframe {
+    .first video {
         width: 400px;
-        height: 400px;
-    }
-
-    .vl {
         height: 400px;
     }
 
@@ -143,40 +169,50 @@ nav ul li a:hover {
     nav {
         flex-direction: column;
         height: auto;
+        padding: 20px;
+    }
+
+    nav .logo img {
+        margin-left: 0;
     }
 
     nav ul {
         flex-direction: column;
-        padding: 10px 0;
+        align-items: center;
+        width: 100%;
+        padding: 0;
     }
 
     nav ul li {
         margin: 10px 0;
     }
 
-    .container {
+    .container, .second-container {
         flex-direction: column;
+        height: auto;
     }
 
-    .first, .second {
+    .box1, .second {
         width: 100%;
-    }
-
-    .first iframe {
-        width: 100%;
-        height: 300px;
-    }
-
-    .vl {
-        display: none;
-    }
-
-    .location, .reciver, .mail {
+        margin: 20px;
         font-size: 20px;
     }
 
-    .second address, .second p {
-        font-size: 14px;
+    .car1 video, .first video {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .Email, .Mobile {
+        margin-left: 0;
+        padding-top: 20px;
+        font-size: 18px;
     }
 }
 
@@ -190,16 +226,32 @@ nav ul li a:hover {
         font-size: 40px;
     }
 
-    .first iframe {
-        height: 250px;
+    .container, .second-container {
+        flex-direction: column;
+        height: auto;
     }
 
-    .location, .reciver, .mail {
+    .box1, .second {
+        width: 100%;
+        margin: 10px;
         font-size: 18px;
     }
 
-    .second address, .second p {
-        font-size: 12px;
+    .car1 video, .first video {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .Email, .Mobile {
+        margin-left: 0;
+        padding-top: 10px;
+        font-size: 16px;
     }
 }
 
@@ -212,15 +264,35 @@ nav ul li a:hover {
         padding: 0 10px;
     }
 
-    .first iframe {
-        height: 200px;
+    #text h1 {
+        font-size: 30px;
     }
 
-    .location, .reciver, .mail {
+    .container, .second-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .box1, .second {
+        width: 100%;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .car1 video, .first video {
+        width: 100%;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+    }
+
+    .Email, .Mobile {
+        margin-left: 0;
+        padding-top: 10px;
         font-size: 16px;
-    }
-
-    .second address, .second p {
-        font-size: 10px;
     }
 }
