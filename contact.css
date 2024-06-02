@@ -8,6 +8,8 @@
 
 body {
     overflow-x: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: #f0f0f0;
 }
 
 .logo img {
@@ -17,13 +19,13 @@ body {
 }
 
 nav {
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 50px 0px 80px;
+    padding: 0 50px 0 80px;
 }
 
 nav ul {
@@ -37,7 +39,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    padding: 0px 40px;
+    padding: 0 40px;
     font-family: 'Righteous', cursive;
     color: black;
     font-size: 23px;
@@ -49,17 +51,19 @@ nav ul li a:hover {
     border-radius: 50px;
 }
 
+/* Header */
 #text h1 {
     font-size: 60px;
     text-align: center;
     font-family: 'Teko', sans-serif;
+    margin-top: 20px;
 }
 
 .container {
     width: 100%;
-    height: 900px;
-    background-color: rgb(75, 74, 75);
+    background-color: #4b4a4b;
     display: flex;
+    padding: 20px;
 }
 
 .first {
@@ -76,10 +80,8 @@ nav ul li a:hover {
 }
 
 .vl {
-    border-left: 3px solid rgb(255, 255, 255);
+    border-left: 3px solid #fff;
     height: 500px;
-    position: absolute;
-    left: 50%;
     margin-left: -3px;
     margin-top: 30px;
 }
@@ -90,7 +92,7 @@ nav ul li a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    color: rgb(255, 255, 255);
+    color: #fff;
 }
 
 .location, .reciver, .mail {
@@ -104,132 +106,4 @@ nav ul li a:hover {
     margin-right: 10px;
 }
 
-.second address, .second p, .mail h4 {
-    margin-left: 30px;
-    font-family: 'Teko', sans-serif;
-    font-size: 25px;
-    color: rgb(255, 242, 0);
-}
-
-.Baseline {
-    font-family: 'Teko', sans-serif;
-    font-size: 35px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    margin: 50px 0;
-}
-
-.social {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.social h3 {
-    font-size: 40px;
-    margin: 0 10px;
-}
-
-.social a {
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
-
-.social a:hover {
-    color: rgba(12, 214, 194, 0.713);
-}
-
-/* Media Queries */
-
-@media (max-width: 768px) {
-    .logo img {
-        width: 150px;
-        margin-left: -30px;
-    }
-
-    nav {
-        padding: 0px 20px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li a {
-        padding: 0px 20px;
-        font-size: 18px;
-    }
-
-    .first iframe {
-        width: 100%;
-        height: 300px;
-    }
-
-    .vl {
-        display: none;
-    }
-
-    .second {
-        width: 100%;
-        align-items: center;
-    }
-
-    .second address, .second p, .mail h4 {
-        margin-left: 0;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .location, .reciver, .mail {
-        justify-content: center;
-        text-align: center;
-        font-size: 20px;
-    }
-
-    .Baseline {
-        margin: 20px auto;
-        font-size: 30px;
-    }
-
-    .social h3 {
-        font-size: 30px;
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo img {
-        width: 120px;
-        margin-left: -20px;
-    }
-
-    nav {
-        padding: 0px 10px;
-    }
-
-    nav ul li a {
-        padding: 0px 10px;
-        font-size: 16px;
-    }
-
-    .first iframe {
-        height: 200px;
-    }
-
-    .second address, .second p, .mail h4 {
-        font-size: 18px;
-    }
-
-    .location, .reciver, .mail {
-        font-size: 18px;
-    }
-
-    .Baseline {
-        font-size: 25px;
-    }
-
-    .social h3 {
-        font-size: 25px;
-    }
-}
+.second address, .second p
