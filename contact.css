@@ -26,8 +26,12 @@ nav {
     padding: 0px 50px 0px 80px;
 }
 
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
 nav ul li {
-    display: inline-flex;
     list-style: none;
 }
 
@@ -45,10 +49,10 @@ nav ul li a:hover {
     border-radius: 50px;
 }
 
-#text {
-    font-size: 30px;
-    font-family: 'Teko', sans-serif;
+#text h1 {
+    font-size: 60px;
     text-align: center;
+    font-family: 'Teko', sans-serif;
 }
 
 .container {
@@ -58,19 +62,16 @@ nav ul li a:hover {
     display: flex;
 }
 
-.second-container {
-    width: 100%;
-    height: 900px;
+.first {
+    width: 50%;
     display: flex;
-    background-color: rgba(1, 4, 52, 0.523);
+    justify-content: center;
+    align-items: center;
 }
 
 .first iframe {
     width: 500px;
     height: 500px;
-    margin: 40px 20px auto 40px;
-    padding: 9px 5px;
-    font-family: 'Teko', sans-serif;
     border-radius: 50px;
 }
 
@@ -84,64 +85,62 @@ nav ul li a:hover {
 }
 
 .second {
-    width: 500px;
-    height: 500px;
-    margin: 40px 20px auto 20px;
-    padding: 9px 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: rgb(255, 255, 255);
+}
+
+.location, .reciver, .mail {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.location i, .reciver i, .mail i {
+    margin-right: 10px;
+}
+
+.second address, .second p, .mail h4 {
+    margin-left: 30px;
     font-family: 'Teko', sans-serif;
     font-size: 25px;
-    display: flow-root;
-}
-
-.second address {
-    margin-top: -90px;
-    margin-left: 250px;
-    font-size: 25px;
-    color: rgb(255, 242, 0);
-}
-
-.location, .reciver {
-    margin: -10px 20px auto 130px;
-    padding: 9px 5px;
-    font-size: 25px;
-}
-
-.second p {
-    margin-top: -50px;
-    margin-left: 250px;
-    font-size: 30px;
-    color: rgb(255, 242, 0);
-}
-
-.mail {
-    margin: 450px 20px auto -390px;
-    padding: 9px 5px;
-    font-size: 25px;
-}
-
-.mail h4 {
-    margin: -37px 20px auto 120px;
-    font-size: 30px;
     color: rgb(255, 242, 0);
 }
 
 .Baseline {
+    font-family: 'Teko', sans-serif;
     font-size: 35px;
     color: rgb(255, 255, 255);
-    margin: -300px 20px auto 500px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .social h3 {
-    align-items: center;
-    display: flex;
-    float: left;
-    justify-content: space-between;
-    margin-left: 570px;
     font-size: 40px;
-    padding: 20px;
+    margin: 0 10px;
 }
 
-/* Media Query for Tablets (768px and below) */
+.social a {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social a:hover {
+    color: rgba(12, 214, 194, 0.713);
+}
+
+/* Media Queries */
+
 @media (max-width: 768px) {
     .logo img {
         width: 150px;
@@ -152,6 +151,11 @@ nav ul li a:hover {
         padding: 0px 20px;
     }
 
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul li a {
         padding: 0px 20px;
         font-size: 18px;
@@ -160,7 +164,6 @@ nav ul li a:hover {
     .first iframe {
         width: 100%;
         height: 300px;
-        margin: 20px 0;
     }
 
     .vl {
@@ -169,38 +172,32 @@ nav ul li a:hover {
 
     .second {
         width: 100%;
-        height: auto;
-        margin: 20px 0;
+        align-items: center;
     }
 
-    .second address,
-    .second p,
-    .mail h4 {
+    .second address, .second p, .mail h4 {
         margin-left: 0;
+        text-align: center;
         font-size: 20px;
-        text-align: center;
     }
 
-    .location,
-    .reciver,
-    .mail {
-        margin-left: 0;
+    .location, .reciver, .mail {
+        justify-content: center;
         text-align: center;
+        font-size: 20px;
     }
 
     .Baseline {
         margin: 20px auto;
-        text-align: center;
+        font-size: 30px;
     }
 
     .social h3 {
-        margin-left: 0;
-        text-align: center;
         font-size: 30px;
+        margin: 10px;
     }
 }
 
-/* Media Query for Mobile Devices (480px and below) */
 @media (max-width: 480px) {
     .logo img {
         width: 120px;
@@ -220,9 +217,11 @@ nav ul li a:hover {
         height: 200px;
     }
 
-    .second address,
-    .second p,
-    .mail h4 {
+    .second address, .second p, .mail h4 {
+        font-size: 18px;
+    }
+
+    .location, .reciver, .mail {
         font-size: 18px;
     }
 
