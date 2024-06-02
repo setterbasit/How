@@ -144,3 +144,96 @@ nav ul li a:hover{
     font-size:40px;
     padding:20px
 }
+/* Media Query for Tablets (768px and below) */
+@media (max-width: 768px) {
+    .logo img {
+        width: 150px;
+        margin-left: -30px;
+    }
+
+    nav {
+        padding: 0px 20px;
+    }
+
+    nav ul li a {
+        padding: 0px 20px;
+        font-size: 18px;
+    }
+
+    .first iframe {
+        width: 100%;
+        height: 300px;
+        margin: 20px 0;
+    }
+
+    .vl {
+        display: none;
+    }
+
+    .second {
+        width: 100%;
+        height: auto;
+        margin: 20px 0;
+    }
+
+    .second address,
+    .second p,
+    .mail h4 {
+        margin-left: 0;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .location,
+    .reciver,
+    .mail {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .Baseline {
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .social h3 {
+        margin-left: 0;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+/* Media Query for Mobile Devices (480px and below) */
+@media (max-width: 480px) {
+    .logo img {
+        width: 120px;
+        margin-left: -20px;
+    }
+
+    nav {
+        padding: 0px 10px;
+    }
+
+    nav ul li a {
+        padding: 0px 10px;
+        font-size: 16px;
+    }
+
+    .first iframe {
+        height: 200px;
+    }
+
+    .second address,
+    .second p,
+    .mail h4 {
+        font-size: 18px;
+    }
+
+    .Baseline {
+        font-size: 25px;
+    }
+
+    .social h3 {
+        font-size: 25px;
+    }
+}
